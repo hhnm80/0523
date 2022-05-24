@@ -5,6 +5,19 @@
     <title>Title</title>
 </head>
 <body>
+<p>
+    js能够直接写入html输出流中
+</p>
+<script>
+    document.write("h1这是一个标题")
+    document.write("p这是一个段落")
 
+</script>
+<p>
+<!--    -->
+    你只能在html中使用<strong>document.write</strong>
+    如果您在文档已加载后使用它（比如在函数中），会覆盖整个文档。
+<!--html很好理解,其实还是弱语言,在head和body里面都可以插入js,js函数可以写在head,也可以写在body里面,函数-->
+</p>
 </body>
 </html>

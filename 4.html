@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>
+  我的第一个js
+</h1>
+<p id="demo">
+js能改变html里面的内容
+</p>
+
+<!--定义一个函数,函数必须位于script中,script可以位于head,也可以位于body中-->
+<script>
+    function myFunc(){
+        //找到元素,但是在这种弱语言的函数里面,根据函数里面语句的就近原则,优先访问局部变量,但是在这里没有局部变量,就访问全局变量,如果去掉标签,我们会发现,html就是一个面向过程的程序,找id为"demo"的元素,弱语句,返回值不用定义类型,如果想定义类型,用一个var就行了,系统会自动为变量分配类型
+        x=document.getElementById("demo")
+
+        x.innerHTML="hello js!!!!!!!!!!!!!!!!"
+
+    }
+</script>
+
+<!--继续面向过程,函数定义了,我们得使用它,调用一个函数,要么是函数调用函数,要么是事件调用函数,事件也可以看做是一个特殊的函数-->
+<button onclick="myFunc()">点击这里</button>
+
+</body>
+</html>
