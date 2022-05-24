@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>菜鸟教程</title>
+</head>
+<body>
+<h1>我的web页面</h1>
+<p id="demo">一个段落......</p>
+<button onclick="myFunc()">点击这里</button>
+
+<!--其实p标签里面就是"注释:  myFunc保存在myScript.js的外部文件里面"这样一串文字,只不过,又把"注释:"放在b标签里面,就是把这一长串文字里面的"注释:"这两个文字连同一个符号进行加粗...在我们不运行代码猜想文件结构的时候,我们只需要看标签里面的内容,就能猜出浏览器里面的内容大概是怎么排列的,从上往下,从左往右
+-->
+<p>
+  <b>注释:</b>
+  myFunc保存在myScript.js的外部文件里面
+
+</p>
+<script src="myScript.js">
+<!--调用函数需要先定义函数,这里是把js函数定义在外部js文件里面,没有定义在当前html文件中-->
+</script>
+
+
+
+
+
+</body>
+</html>

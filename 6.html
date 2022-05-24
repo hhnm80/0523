@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>我的第一段js</h1>
+<p id="demo">
+js能改变html元素的样式
+</p>
+
+<script>
+  function myFunc(){
+    //找到元素,
+    x=document.getElementById("demo")
+    //改变样式,其实我们在写这个语句的时候,我们应该知道我们找到的是什么元素,然后我们才能操作对应元素的属性,因为不同类型的元素,属性可能会有所不同
+    x.style.color="#ff0000"
+  }
+</script>
+
+<button onclick="myFunc()">点击这里</button>
+
+<p>请输入数字,如果输入的不是数字,浏览器会弹出提示框</p>
+<input id="demo1" type="text">
+<script>
+  function myFunc(){
+    var x=document.getElementById("demo1").value;
+    //如果啥也没有输入或者输入了但是输入的内容不是数字,""是啥也没有,电平值为0,而" "是空格字符,电平值不为0
+    if (x==""||isNaN(x)){
+      alert("不是数字")
+    }
+
+  }
+</script>
+
+<button type="button" onclick="myFunc()">点击这里</button>
+</body>
+</html>
