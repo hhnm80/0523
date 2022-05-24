@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--首先定义一个函数,必须在script标签中定义函数,注意除了script标签,head里面一般没有其它的标签-->
+<!--“./”：代表目前所在的目录。
+
+“../”：代表上一层目录。
+
+“/”：代表根目录。-->
+
+<script>
+  function changeImage(){
+
+    //  每次调用这个函数之前,我们会看id为myImage的元素里面的src属性,因为函数是修改元素的src,所以我们每次检查src,决定下一步显示什么......
+    element=document.getElementById("myImage")
+    //
+    if (element.src.match("bulbon")){
+        //当前目录下的images
+        // element.src="images/pic_bulboff.gif"
+    //    当前目录
+        element.src="./images/pic_bulboff.gif"
+
+
+        //    根目录
+    //     element.src="/images/pic_bulboff.gif"
+
+
+    }else{
+        // element.src="images/pic_bulbon.gif"
+       element.src="./images/pic_bulbon.gif"
+
+
+        // element.src="/images/pic_bulbon.gif"
+
+    }
+  }
+</script>
+
+<!--这个案例实现的是点击灯泡灯亮或者灯灭,这种在qt或者其它高级语言里面,就是一个标记变量不断的赋值,0
+和1,0的时候熄灭,1的时候亮,但是在这里,灯泡亮和灭并不是真正的亮灭,而是两个不同的图片交替显示,给人造成一种亮灭的错觉,虽然说html类似于面向过程,但是和c语言这种面向过程还是有区别,在c语言里面,不但是面向过程,还有顺序,比如在调用函数之前,函数必须在调用的地方上面先定义,而在html里面,函数或者变量的位置不一定要求在调用位置之前,只要定义了就可以,比如这里,image在下面,调用image的函数在上面,但是这个并不影响,因为这里本来就是button,所以type="button"可写可不写-->,
+<image id="myImage" onclick="changeImage()" src="images/pic_bulboff.gif" width="100" height="180"></image>
+
+<p>点击灯泡就可以打开或者关闭这盏灯</p>
+
+</body>
+</html>
