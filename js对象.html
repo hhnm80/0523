@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>菜鸟教程(runoob.com)</title>
+</head>
+<body>
+
+<p>创建 JavaScript 对象。</p>
+<p id="demo"></p>
+<script>
+<!--  js里面的对象和其它语言里面的对象有所区别,其它语言里面除了成员变量,还有成员函数,在下面定义一个对象person,person里面相当于有几个成员变量firstName lastName age eyeColor-->
+  var person = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"};
+  document.getElementById("demo").innerHTML =
+          person.firstName + " 现在 " + person.age + " 岁.";
+</script>
+
+</body>
+</html>
