@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+  var var1 = 1; // 不可配置全局属性
+  //没有使用var,,,相当于未声明,未声明的变量归属于window,相当于全局变量,除此之外,函数外的变量也是全局变量,函数内是局部变量,所谓全局变量局部变量其实是按照生命周期来划分的,既然var2属于全局,只有页面关闭这个变量才会被销毁.....
+  var2 = 2; // 没有使用 var 声明，可配置全局属性
+
+  console.log(this.var1); // 1
+  console.log(window.var1); // 1
+  console.log(window.var2); // 2
+
+  delete var1; // false 无法删除
+  console.log(var1); //1
+
+  delete var2;
+  console.log(delete var2); // true
+  // console.log(var2); // 已经删除 报错变量未定义
+</script>
+
+
+</body>
+</html>

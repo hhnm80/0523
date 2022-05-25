@@ -8,11 +8,30 @@
 
 <p>创建 JavaScript 对象。</p>
 <p id="demo"></p>
+<p>创建和使用对象方法。</p>
+<p>对象方法是一个函数定义,并作为一个属性值存储。</p>
+<p id="demo1"></p>
+<p id="demo2"></p>
 <script>
-<!--  js里面的对象和其它语言里面的对象有所区别,其它语言里面除了成员变量,还有成员函数,在下面定义一个对象person,person里面相当于有几个成员变量firstName lastName age eyeColor-->
-  var person = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"};
-  document.getElementById("demo").innerHTML =
-          person.firstName + " 现在 " + person.age + " 岁.";
+<!--  js里面的对象和其它语言里面的对象很相似,除了成员变量,还有成员函数,在下面定义一个对象person,person里面相当于有几个成员变量firstName lastName age eyeColor 还有成员函数-->
+  var person = {firstName:"John",
+    lastName:"Doe",
+    age:50,
+    eyeColor:"blue",
+    fullName : function()
+    {
+      return this.firstName + " " + this.lastName;
+    }
+};
+  // document.getElementById("demo").innerHTML =
+  //         person.firstName + " 现在 " + person.age + " 岁.";
+// document.getElementById("demo").innerHTML =
+//         person["firstName"] + " " + person["lastName"];
+
+document.getElementById("demo").innerHTML = person.fullName();
+
+document.getElementById("demo1").innerHTML = "不加括号输出函数表达式："  + person.fullName;
+
 </script>
 
 </body>
