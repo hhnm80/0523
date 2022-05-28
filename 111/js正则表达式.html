@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>菜鸟教程</title>
+</head>
+<body>
+<p>搜索字符串 "runoob", 并显示匹配的起始位置：</p>
+
+<button onclick="myFunc()">点我</button>
+<p id="demo"></p>
+<script>
+  function myFunc(){
+    var str="visit microsoft Runoob"
+    //难道/代表前面任意,后面任意的意思么?????
+    //取得值为16
+    var n=  str.search(/Runoob/i)
+    //输出值16
+    // var n = str.search("Runoob");
+    //输出值16
+    // var n=  str.search(/Runoob/)
+    //replace() 方法使用正则表达式
+
+    var txt = str.replace(/microsoft/i,"Runoob");
+
+
+
+    document.getElementById("demo").innerHTML = n;
+    //输出visit Runoob Runoob
+
+    document.getElementById("demo").innerHTML = txt;
+
+  }
+</script>
+
+
+
+</body>
+</html>

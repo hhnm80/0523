@@ -7,9 +7,20 @@
 <body>
 <!--一般代码都是写在body里面,当然head里面也可以嵌入代码,只是嵌入的代码效果体现在了当前标签页面的标题中,head里面也可以加入什么换行符,什么script,当然这些内容都是解释执行的......-->
 <!--我们要在body里面写什么东西呢？？？？？-->
-<p></p>
+<p> constructor 属性返回变量或对象的构造函数。    </p>
+<!--id就是身份标识,要想找到这个元素必须有标识,就像现实中,没有身份证怎么去找人-->
+<p id="demo"></p>
 
+<script>
+document.getElementById("demo").innerHTML="john".constructor + "<br>" +
+    (3.14).constructor + "<br>" +
+    false.constructor + "<br>" +
+    [1,2,3,4].constructor + "<br>" +
+    {name:'john', age:34}.constructor + "<br>" +
+    new Date().constructor + "<br>" +
+    function () {}.constructor;
 
+</script>
 
 
 
