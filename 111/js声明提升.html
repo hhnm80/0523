@@ -5,6 +5,18 @@
     <title>Title</title>
 </head>
 <body>
+<p id="demo"></p>
+<script>
+  x = 5; // 变量 x 设置为 5
+  elem = document.getElementById("demo"); // 查找元素
+  elem.innerHTML = x;                     // 在元素中显示 x
+  //上面两句合并为document.getElementById("demo").innerHTML=x,这里主要是区分变量带var和不带var的区别,
+  var x; // 声明 x 如果变量带了var 级别提升,相当于全局变量,delete无法删除,delete只能删除局部变量,
+delete x;
+//浏览器console提示 x is not defined 说明变量已经被删除,
+print(x)
 
+
+</script>
 </body>
 </html>
