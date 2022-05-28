@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表单提交</title>
+</head>
+<body>
+虽然没有见到换行符,但是下面两个元素的确不在同一行
+<h1>js验证输入</h1>
+<p>请输入1到10之间的数字</p>
+<!--下一行,一个输入框 input是空标签，用不用“/”结束都无所谓，不影响这类标签占位
+<input id="numb"/>   空标签可以不需要/
+-->
+<input id="numb">
+<!--利用button按钮提交,和input submit这种区别在哪里呢??????-->
+<button type="button" onclick="myFunction()">提交</button>
+
+<p id="demo"></p>
+
+<script>
+    function myFunction(){
+        //这是js里面严格声明变量的形式,带着var,var是一个泛型 可以代表任何类型,
+        var x,text;
+        // 获取 id="numb" 的值
+        x = document.getElementById("numb").value;
+
+        // 如果输入的值 x 不是数字或者小于 1 或者大于 10，则提示错误 Not a Number or less than one or greater than 10
+        if (isNaN(x) || x < 1 || x > 10) {
+            text = "输入错误";
+        } else {
+            text = "输入正确";
+        }
+        document.getElementById("demo").innerHTML = text;
+
+    }
+
+</script>
+
+
+
+
+
+
+</body>
+</html>

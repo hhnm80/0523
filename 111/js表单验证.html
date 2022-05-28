@@ -11,7 +11,7 @@
       //表单验证是不是有前端验证和后端验证,
       //  先取出myForm这个表单里面的fname这个元素里面的值,
       var x=document.forms["myForm"]["fname"].value;
-      //如果值为null或者空字符,说明输入框里面什么也没有,但是这个程序不是完整的逻辑,因为不管输入框里面是否输入内容,都会跳转到demo_form.php这个页面,所以怎么完善这个程序呢???在判断输入框情况的时候,首先看输入框有没有内容,如果没有内容会怎样,有内容,则讨论里面内容的情况,比如是不是空字符或者其他特殊字符
+      //如果值为null或者空字符,说明输入框里面什么也没有,但是这个程序不是完整的逻辑,因为不管输入框里面是否输入内容,都会跳转到demo_form.php这个页面,所以怎么完善这个程序呢???在判断输入框情况的时候,首先看输入框有没有内容,如果没有内容会怎样,有内容,则讨论里面内容的情况,比如是不是空字符或者其他特殊字符   那么怎么根据表单内容决定是否提交呢????就是我们接下来要完善程序的内容....
       if (x == null || x == "") {
         alert("需要输入名字。");
         return false;
@@ -40,7 +40,8 @@
 <!--  <input type="submit" value="提交">-->
 <!--</form>-->
 <form name="myForm" action="demo_form.php"
-      onsubmit="validateForm()" method="post">
+      onsubmit="return validateForm()" method="post">
+<!--    注意onsubmit="validateForm()"和onsubmit="return validateForm()"的区别,前者的话,就算没有填入名字也能跳转,说明此时返回值不起作用,后者的话带有return,返回值起了作用,这时候如果输入框里面不填入东西 false就会起作用,网页不会跳转-->
 
 <!--    我在想怎么根据网页设计图来实现代码呢???首先是两个汉字名字:   然后与汉字同一行往右边有一个输入框,就是一个input元素,然后再往右边有一个提交按钮  在js或者html里面,按钮可以用button表示,也可以用input type="submit"来表示,  input type=“submit“ 和“button“有什么区别?????input type="submit" 和"button"在功能、是否具备Enter键支持和是否需要写JavaScript来阻止上有所区别:
 

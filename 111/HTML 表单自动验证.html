@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表单自动验证</title>
+</head>
+<body>
+<!--注意这里只有两个元素,一个是跳转页面 一个是请求方法-->
+<form action="demo_form.php" method="post">
+
+
+<!--required是什么属性呢?????HTML 表单验证也可以通过浏览器来自动完成。
+
+如果表单字段 (fname) 的值为空, required 属性会阻止表单提交：-->
+  <input type="text" name="fname" required="required">
+
+<!--  在这里,提交按钮点击以后,表单里面并没定义onsubmit事件,-->
+  <input type="submit" value="提交">
+</form>
+
+<p>点击提交按钮，如果输入框是空的，浏览器会提示错误信息。</p>
+
+</body>
+</html>
