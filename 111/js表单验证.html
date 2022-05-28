@@ -20,11 +20,59 @@
 </head>
 <body>
 <!--在body里面定义一个表单元素,-->
+
+<!--运行代码后打开的网页是http://localhost:63342/0523/111/js%E8%A1%A8%E5%8D%95%E9%AA%8C%E8%AF%81.html?_ijt=i26pu7gf0o8udml6n134elih76 在做前端项目的时候,需要根据前端UI设计来实现代码,所以在公司,有一个职位叫做UI,就是设计网站布局这些,然后程序员按照布局实现前端代码  -->
+
+<!--action属性规定当提交表单时，向何处发送表单数据。（是必需的属性）,在这里是向demo_form.php这个网页发送数据,onsubmit 事件在提交表单时调用。method 属性规定如何发送表单数据（表单数据发送到 action 属性所规定的页面  表单数据可以作为 URL 变量（method="get"）或者 HTTP post （method="post"）的方式来发送。
+
+ ）。
+
+
+
+
+
+-->
+<!--<form name="myForm" action="demo_form.php"-->
+<!--      onsubmit="return validateForm()" method="post">-->
+<!--  名字: <input type="text" name="fname">-->
+<!--  <input type="submit" value="提交">-->
+<!--</form>-->
 <form name="myForm" action="demo_form.php"
-      onsubmit="return validateForm()" method="post">
+      onsubmit="validateForm()" method="post">
+
+<!--    我在想怎么根据网页设计图来实现代码呢???首先是两个汉字名字:   然后与汉字同一行往右边有一个输入框,就是一个input元素,然后再往右边有一个提交按钮  在js或者html里面,按钮可以用button表示,也可以用input type="submit"来表示,  input type=“submit“ 和“button“有什么区别?????input type="submit" 和"button"在功能、是否具备Enter键支持和是否需要写JavaScript来阻止上有所区别:
+
+1、功能不同
+
+submit用在表单内,里面有类似的默认方法封装,普通单击就是提交所在表单。
+
+button是个普通的按钮,如果不写onclick单击等事件,那么这个按钮点击是没有任何反应的,所有事件都需要自己手动写。
+
+2、是否具备enter键的支持
+
+submit使用后，页面支持键盘enter键操作。
+
+button使用后往往页面不支持enter键了。所以需要支持Enter键，必须要设置个submit，默认enter键对页面第一个submit进行操作。
+
+3、是否需要写javascript来阻止
+
+button这就是一个按钮。如果你不写javascript 的话，按下去什么也不会发生。
+
+submit这样的按钮用户点击之后会自动提交 form，除非你写了javascript 阻止它。
+
+<form action="form_action.asp" method="get">
+    <p>First name: <input type="text" name="fname" /></p>
+    <p>Last name: <input type="text" name="lname" /></p>
+    <input type="submit" value="Submit" />
+</form>
+————————————————
+版权声明：本文为CSDN博主「poker-k」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。
+原文链接：https://blog.csdn.net/weixin_45262162/article/details/123404999
+-->
   名字: <input type="text" name="fname">
   <input type="submit" value="提交">
 </form>
+<!--前面我们已经总结过,观察网页内容,我们忽略两边标签做出的干扰,直接看标签里面内容,百度form表单里面的子元素一般是input,,,,,-->
 
 </body>
 </html>
